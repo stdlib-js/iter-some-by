@@ -1,4 +1,0 @@
-// Copyright (c) 2022 The Stdlib Authors. License is Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0
-/// <reference types="./index.d.ts" />
-import r from"https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-iterator-like@esm/index.mjs";import t from"https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-function@esm/index.mjs";import e from"https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-positive-integer@esm/index.mjs";import s from"https://cdn.jsdelivr.net/gh/stdlib-js/error-tools-fmtprodmsg@esm/index.mjs";var i=r,o=t,n=e.isPrimitive,d=s;var m=function(r,t,e,s){var m,p,f;if(!i(r))throw new TypeError(d("0Cp48",r));if(!n(t))throw new TypeError(d("0Cp4I",t));if(!o(e))throw new TypeError(d("0Cp3Z",e));for(m=0,f=-1;;){if(f+=1,(p=r.next()).done)return!1;if(e.call(s,p.value,f)&&(m+=1)===t)return!0}};export{m as default};
-//# sourceMappingURL=index.mjs.map
