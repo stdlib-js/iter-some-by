@@ -45,43 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/iter-some-by
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-iterSomeBy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-some-by@umd/browser.js' )
-```
-The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/iter-some-by/tags). For example,
-
-```javascript
-iterSomeBy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-some-by@v0.1.0-umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var iterSomeBy = require( 'path/to/vendor/umd/iter-some-by/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/iter-some-by@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.iterSomeBy;
-})();
-</script>
+var iterSomeBy = require( '@stdlib/iter-some-by' );
 ```
 
 #### iterSomeBy( iterator, n, predicate\[, thisArg] )
@@ -166,14 +153,9 @@ var n = ctx.count;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/iter-some-by@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var randu = require( '@stdlib/random-iter-randu' );
+var iterSomeBy = require( '@stdlib/iter-some-by' );
 
 function threshold( r ) {
     return ( r >= 0.95 );
@@ -190,11 +172,6 @@ var bool = iterSomeBy( riter, 5, threshold );
 // returns <boolean>
 
 console.log( bool );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -266,8 +243,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/iter-some-by.svg
 [npm-url]: https://npmjs.org/package/@stdlib/iter-some-by
 
-[test-image]: https://github.com/stdlib-js/iter-some-by/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/iter-some-by/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/iter-some-by/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/iter-some-by/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/iter-some-by/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/iter-some-by?branch=main
@@ -300,15 +277,15 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/iter/any-by]: https://github.com/stdlib-js/iter-any-by/tree/umd
+[@stdlib/iter/any-by]: https://github.com/stdlib-js/iter-any-by
 
-[@stdlib/iter/every-by]: https://github.com/stdlib-js/iter-every-by/tree/umd
+[@stdlib/iter/every-by]: https://github.com/stdlib-js/iter-every-by
 
-[@stdlib/iter/for-each]: https://github.com/stdlib-js/iter-for-each/tree/umd
+[@stdlib/iter/for-each]: https://github.com/stdlib-js/iter-for-each
 
-[@stdlib/iter/none-by]: https://github.com/stdlib-js/iter-none-by/tree/umd
+[@stdlib/iter/none-by]: https://github.com/stdlib-js/iter-none-by
 
-[@stdlib/iter/some]: https://github.com/stdlib-js/iter-some/tree/umd
+[@stdlib/iter/some]: https://github.com/stdlib-js/iter-some
 
 <!-- </related-links> -->
 
